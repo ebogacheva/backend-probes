@@ -13,4 +13,14 @@ public class HelloEdpController {
     public String hello() {
         return "Hello, EDP!";
     }
+
+    @GetMapping(value = "/api/readiness")
+    public String readiness() {
+        return "readiness-ok";
+    }
+
+    @GetMapping(value = "/api/liveness")
+    public String liveness() {
+        return "liveness-ok";
+    }
 }
